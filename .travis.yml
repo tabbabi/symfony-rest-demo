@@ -1,8 +1,6 @@
 language: php
 
 php:
-  - 5.3
-  - 5.4
   - 5.5
   - 5.6
 
@@ -22,8 +20,6 @@ before_script:
 
   - composer self-update
   - composer install --dev --prefer-dist
-  - app/console do:da:cr -e=test > /dev/null
-  - app/console do:sc:cr -e=test > /dev/null
   - chmod -R 777 app/cache app/logs
   - app/console --env=test cache:warmup
   - chmod -R 777 app/cache app/logs
